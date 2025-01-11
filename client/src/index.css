@@ -1,0 +1,201 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.navbar {
+    background-color: #007bff;
+    padding: 10px 20px;
+}
+
+.navbar a {
+    color: white;
+    margin-right: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.auth-container {
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.auth-container h2 {
+    text-align: center;
+}
+
+.auth-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-container .form-group {
+    margin-bottom: 15px;
+}
+
+.auth-container label {
+    font-weight: bold;
+}
+
+.auth-container input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.auth-container button {
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.auth-container button:hover {
+    background-color: #0056b3;
+}
+
+.auth-container p {
+    text-align: center;
+}
+
+
+.expense-form {
+    margin: 20px 0;
+}
+
+.expense-form h3 {
+    text-align: center;
+    color: #333;
+}
+
+.expense-form .form-group {
+    margin-bottom: 15px;
+}
+
+.expense-form label {
+    font-weight: bold;
+}
+
+.expense-form input,
+.expense-form select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+
+.expense-list {
+    margin: 20px 0;
+}
+
+.expense-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.expense-list th,
+.expense-list td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.expense-list th {
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.expense-list td button {
+    background-color: #ff4d4d;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.expense-list td button:hover {
+    background-color: #e60000;
+}
+
+
+.dashboard {
+    padding: 20px;
+}
+
+.dashboard h1 {
+    text-align: center;
+    color: #007bff;
+}
+
+.dashboard-summary {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+}
+
+.dashboard-summary div {
+    text-align: center;
+}
+
+.dashboard-summary .total-income {
+    color: #28a745;
+}
+
+.dashboard-summary .total-expense {
+    color: #dc3545;
+}
