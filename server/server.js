@@ -1,3 +1,4 @@
+require("dotenv").config(); // Load .env variables
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -7,10 +8,12 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-// Connect to MongoDB
-mongoose.connect(
-  "mongodb+srv://Subhadeep790:munai2000@mycluster.qowbluh.mongodb.net/expense-tracker"
-);
+// Connect to MongoDB using .env variables
+const mongoURI = `mongodb+srv://${process.env.MONGO_USERNAME}:${process.env.MONGO_PASSWORD}@${process.env.MONGO_CLUSTER}/${process.env.MONGO_DB}`;
+mongoose
+  .connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log("MongoDB connected"))
+  .catch((err) => console.error("MongoDB connection error:", err));
 
 // User Schema
 const UserSchema = new mongoose.Schema({
@@ -23,9 +26,13 @@ const User = mongoose.model("User", UserSchema);
 // Signup Route
 app.post("/register", async (req, res) => {
   const { email, password } = req.body;
-  const user = new User({ email, password });
-  await user.save();
-  res.json({ message: "User registered successfully" });
+  try {
+    const user = new User({ email, password });
+    await user.save();
+    res.json({ message: "User registered successfully" });
+  } catch (error) {
+    res.status(500).json({ message: "Error registering user", error });
+  }
 });
 
 // Login Route
